@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="leftBoxContainer">
+    <label>Your Result</label>
+    <div class="scoreContainer">
+      <div class="score">76</div>
+      <div class="scoreDetails">of 100</div>
+    </div>
+    <div class="resultText">
+      <label>Great</label>
+      <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+  </div>
+  <div class="rightBoxContainer">
+    <label>Summary</label>
+    <div class="summarySection" *ngFor="let res of scoreResults">
+      <div class="summaryLine" [style.background-color]="res.backgroundColor">
+        <div class="iconAndText">
+          <img [src]="res.icon" />
+          <label [style.color]="res.textColor">{{ res.text }}</label>
+        </div>
+        <div class="scoreNumbers">
+          <label>{{ res.score }} </label>/ 100
+        </div>
+      </div>
+    </div>
+    <div class="buttonArea"><button>Continue</button></div>
+  </div>
+</div>
